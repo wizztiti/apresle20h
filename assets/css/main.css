@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+html {
+	height: 100%;
+	font-smooth: always;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body,
+.main {
+	height: 100%;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	color: #333333;
+}
+
+a {
+	text-decoration: none;
+
+}
+
+a:link, a:visited {
+	color: #333333;
+}
+
+a:hover {
+	color: #019ad4;
+}
+
+/************************************************************/
+/*		DECLARATION POLICES CARACTERES						*/
+/************************************************************/
+@font-face {
+    font-family: 'ArnoPro-Regular';
+    src: url('../fonts/ArnoPro-Regular.woff') format('woff'),
+    	 url('../fonts/ArnoPro-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ArnoPro-Bold';
+    src: url('../fonts/ArnoPro-Bold.woff') format('woff'),
+    	 url('../fonts/ArnoPro-Bold.otf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'ArnoPro-Caption';
+    src: url('../fonts/ArnoPro-Caption.woff') format('woff'),
+    	 url('../fonts/ArnoPro-Caption.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ArnoPro-BoldCaption';
+    src: url('../fonts/ArnoPro-BoldCaption.woff') format('woff'),
+    	 url('../fonts/ArnoPro-BoldCaption.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ArnoPro-SmbdCaption';
+    src: url('../fonts/ArnoPro-SmbdCaption.woff') format('woff'),
+    	 url('../fonts/ArnoPro-SmbdCaption.otf') format('truetype');
+}
+
+
+/************************************************************/
+/*		ZONE NOIRE											*/
+/************************************************************/
+.blackArea {
+	position: relative;
+	width: 50%;
+	min-width: 340px;
+	height: 100%;
+	min-height: 100%;
+	background-color: #1a171b;
+	float: left;
+
+	/*-webkit-transform-style: preserve-3d;
+  	-moz-transform-style: preserve-3d;
+  	transform-style: preserve-3d;*/
+}
+
+.blackArea .content {
+	padding: 0 25px;
+	position: relative;
+  	float: right;
+  	width: 291px;
+  	top: 50%;
+  	-ms-transform: translateY(-50%);
+  	-webkit-transform: translateY(-50%);
+  	-moz-transform: translateY(-50%);
+  	-o-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+
+.blackArea .content p {
+	font-family: "Arnopro", Verdana, Geneva, sans-serif;
+	font-size: 0.65rem;
+	font-style: italic;
+	color: #999999;
+	text-align: center;
+	margin: 7px 30px 15px;
+	opacity: 0;
+}
+
+.blackArea .menu {
+	padding-left : 0;
+	width : 100%;
+	text-align: left;
+	visibility: hidden;
+}
+
+.blackArea .menu .link {
+	color: #444444;
+	background-color: #1a191c;
+}
+
+.blackArea .menu .menuTrait {
+	background-color: #444444;
+}
+
+.btn_sound {
+	position: absolute;
+    bottom: 15px;
+    left: 15px;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+/************************************************************/
+/*		ZONE BLANCHE										*/
+/************************************************************/
+.whiteArea {
+  	position: relative;
+  	min-width: 50%;
+  	height: 100%;
+  	background-color: #FFF;
+  	float: right;
+}
+
+.whiteArea .content {
+	margin-left: 25px;
+	position: relative;
+  	text-align: left;
+	/*top: 50%;
+  	-ms-transform: translateY(-50%);
+  	-webkit-transform: translateY(-50%);
+  	-moz-transform: translateY(-50%);
+  	-o-transform: translateY(-50%);
+  	transform: translateY(-50%);*/
+}
+
+.whiteArea .content p {
+	margin-bottom: 15px;
+}
+
+.whiteArea .menu {
+	position: relative;
+	display: inline-block;
+	width: 288px;
+}
+
+.whiteArea .menu .link {
+	color: #1a191c;
+	background-color: #FFF;
+}
+
+.whiteArea .menu .menuTrait {
+	background-color: #464546;
+}
+
+
+
+/************************************************************/
+/*		MENU												*/
+/************************************************************/
+
+
+.menu .li {
+	font-family: "Arnopro", Verdana, Geneva, sans-serif;
+	font-size: 0.6rem;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: #444444;
+	background-color: #444444;
+	position: relative;
+	/*width: 150px;
+	min-width: 288px;*/
+	height: 0.375rem;
+	margin: 0.375rem 0 0 0;
+	transition: all 1s;
+	cursor: pointer;
+}
+
+.menu .li::after {
+	padding-right: 3px;
+	top : -2px;
+	position: absolute;
+	background: white;
+}
+
+.menu .li:hover {
+	color: #019ad4;
+	background-color: #019ad4;
+}
+
+.blackArea .menu .li::after {
+	background-color: black;
+}
+
+#avantle20h::after{
+	content: "avant le 20h";
+}
+
+#consulting::after{
+	content: "Consulting & matière grise";
+}
+
+#infrarouge::after{
+	content: "L'expérience sous infrarouge";
+}
+
+#references::after{
+	content: "Références & ambiances réussies";
+}
+
+#presse::after{
+	content: "Presse";
+}
+
+#contact::after{
+	content: "Contact";
+}
+
+#welcome::after{
+	content: "Welcome";
+}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="Description" content="Hervé Prouteau : conseils précieux et créations originales pour réchauffer la planète" />
+        <title>Hervé Prouteau - Après le 20H</title>
+        <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/pages.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/mybox.css" rel="stylesheet" type="text/css">
+        <link href="assets/js/libs/video-js/video-js.css" rel="stylesheet">
+        <script src="assets/js/libs/video-js/video.js"></script>
+        <script src="assets/js/libs/jquery.js"></script>    
+        <script src="assets/js/libs/jquery.easing.js"></script>
+        <script src="assets/js/libs/jquery-color.js"></script>
+        <script src="assets/js/audioPlayer.js"></script> 
+        <script src="assets/js/mybox.js"></script> 
+        <script src="assets/js/app.js"></script> 
+    </head>
+
+    <body>
+    	<div class="main">
+            <div class="blackArea">
+            	<div class="content">
+                	<img class="logo" src="assets/img/logo.gif">
+                    <p>Conseils précieux et créations originales pour réchauffer la planète</p>
+                </div>
+                <a class="btn_sound pauseAudio"><img src="assets/img/soundpause.jpg" width="30px" height="30px"/></a>
+                <a class="btn_sound startAudio"><img src="assets/img/soundplay.jpg" width="30px" height="30px"/></a>
+            </div>          
+            <div class="whiteArea">
+                <div class="content vertical-align-center">
+                    <div class="menu">
+                        <div>
+                            <div class="li avantle20h" id="avantle20h"></div>
+                            <br>
+                            <div class="li consulting" id="consulting"></div>
+                            <div class="li infrarouge" id="infrarouge"></div>
+                            <div class="li references" id="references"></div>
+                            <div class="li presse" id="presse"></div>
+                            <div class="li contact" id="contact"></div>
+                            <div class="li welcome" id="welcome"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <audio class="audioDemo" loop>
+        </audio>    
+        <script>
+            $(document).ready(function() {
+                app.init();
+            });
+        </script>
+    </body>
+</html>

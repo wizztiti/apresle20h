@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+/************************************************************/
+/*		CONTENT												*/
+/************************************************************/
+
+.whiteArea .article {
+	font-family: "ArnoPro-Regular", Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	line-height: 1.2;
+	font-weight: 100;
+}
+
+.whiteArea .article::after {  /* Fix pour que la Div aie la taille de son contenu    */
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+.article .li{
+	font-size: 0.7em;
+	font-weight: 600;
+	height: 0px;
+	margin: 16px 0px 0px;
+}
+
+.whiteArea .article h1 {
+	font-family: Arial, Verdana, Geneva, sans-serif;
+	font-size: 1.3em;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #019ad4;
+	border-bottom: 4px solid black;
+	text-align: right;
+	margin-bottom: 22px;
+}
+
+.whiteArea .article h2 {
+	font-family: "ArnoPro-Caption", Verdana, Geneva, sans-serif;
+	font-size: 1.2em;
+	margin:  7px 0 0 0;
+}
+
+.whiteArea .article h3 {
+	font-family: "ArnoPro-SmbdCaption", Verdana, Geneva, sans-serif;
+	margin-top: 13px;
+}
+
+
+.whiteArea .article a {
+	font-family: "ArnoPro-Caption", Verdana, Geneva, sans-serif;
+	font-weight: 600;
+}
+
+/************************************************************/
+/*		SPECIFIQUE AUX PAGES												*/
+/************************************************************/
+
+.consulting_methodologie_texte {
+	float: left;
+	width: 415px;
+	padding-right: 15px;
+}
+
+#consulting_methodologie_images {
+	text-align: right;
+}
+
+#consulting_methodologie_images img {
+	padding-bottom: 15px;
+}
+
+
+
+#div_infrarouge_Couverture .infrarouge_Image {
+	position: absolute;
+}
+
+.legendeImage {
+	font-size: 0.9em;
+	text-align: center;
+	color: #777777;
+}
+
+.infrarouge_Couverture img {
+	width: 110px;
+	height: auto ;
+}
+
+.infrarouge_Couverture img:hover {
+	cursor: pointer;
+}
+
+.infrarouge_Video {
+	width: 190px;
+}
+
+#div_infrarouge_Couverture {
+	height: 130px;
+	margin-top: 15px;
+}
+
+
+
+
+#references_entreamis_texte {
+	width: 283px;
+    float: left;
+    padding-right: 10px;
+}
+
+#references_entreamis_images {
+	text-align: right;
+}
+
+#references_entreamis_images img {
+	padding-left: 8px;
+	padding-bottom: 7px;
+}
+
+
+
+
+
+#references_aperitivo_panoramique {
+	padding-bottom: 10px;
+}
+
+#references_aperitivo_logo {
+	position: relative;
+	left: -7px;
+}
+
+#references_aperitivo_texte {
+	width: 400px;
+    float: left;
+    padding-right: 10px;
+}
+
+#references_aperitivo_images {
+	text-align: right;
+}
+
+#references_aperitivo_images img {
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+#references_tropezienne_texte {
+	width: 360px;
+    float: left;
+    padding-right: 10px;
+}
+
+#references_tropezienne_images {
+	text-align: right;
+}
+
+
+
+#welcome_atmosphere_texte {
+	width: 422px;
+	float: left;
+	padding-right: 10px;
+}
+
+#welcome_atmosphere_images {
+	float: right;
+	width: 276px;
+}
+
+#welcome_atmospheres_images img {
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+#welcome_infrarouge_texte {
+	width: 332px;
+	float: left;
+	padding-right: 10px;
+}
+
+#welcome_infrarouge_images {
+	float: right;
+	width: 243px;
+}
+
+#welcome_infrarouge_images img {
+	float: right;
+	margin-left: 11px;
+    margin-bottom: 13px;
+}
+
+
+
+.welcome_consultingfields_image {
+	float: left;
+    margin-right: 5px;
+}

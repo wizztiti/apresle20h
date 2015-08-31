@@ -1,0 +1,26 @@
+#mybox #mybox_conteneur {
+	position: absolute;
+	top: 50px;
+	left: 110px;
+	z-index: 9998;
+	border: #000000 solid 10px;
+}
+
+#mybox #mybox_relative {
+	position: relative;
+}
+
+#mybox #mybox_contenu {
+	/*padding: 10px;*/
+}
+
+#mybox #mybox_close {
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	width: 30px;
+	height: 30px;
+	background: url(../img/close.png);
+	z-index: 9997;
+	cursor: pointer;
+}
