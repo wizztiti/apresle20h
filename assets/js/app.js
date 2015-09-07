@@ -56,7 +56,7 @@ var app = {
 	/*================  CLIC SUR UN DES MENUS ==============*/
 	clickOnLi : function(e) {
 		e.preventDefault();
-		//$("#"+document.rubrique).css({color: "#444444", "background-color": "#444444"}); // les li du menu reprennent leur color initiale.
+		$("#"+document.rubrique).css({color: "#444444", "background-color": "#444444"}); // les li du menu reprennent leur color initiale.
 		document.page = $(this).attr("id");
 		document.rubrique = $(this).attr("class").slice(3);
 		mybox.close();
@@ -118,7 +118,7 @@ var app = {
 			document.audioOnPlay = true;
 		};
 
-		//$("#"+document.rubrique).css({color: "#019ad4", "background-color": "#019ad4"}); // le menu sélectionné garde sa couleur.
+		$("#"+document.rubrique).css({color: "#019ad4", "background-color": "#019ad4"}); // le menu sélectionné garde sa couleur.
 	},
 	
 

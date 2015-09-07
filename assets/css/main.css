@@ -201,8 +201,8 @@ a:hover {
 }
 
 .menu .li:hover {
-	color: #019ad4;
-	background-color: #019ad4;
+	color: #019ad4 !important;
+	background-color: #019ad4 !important;
 }
 
 .blackArea .menu .li::after {
