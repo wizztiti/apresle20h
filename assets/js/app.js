@@ -57,7 +57,14 @@ var app = {
 		e.preventDefault();
 		$(".menu li").css({color: "#444444","background-color": "#444444"}); // les li du menu reprennent leur color initiale.
 		document.page = $(this).attr("id");
-		document.rubrique = document.page.substring(0, document.page.search("_") );
+		
+		// Définition de la variable rubrique.
+		if(document.page.search("_") > 0) {
+			document.rubrique = document.page.substring(0, document.page.search("_") ); // soustrait la 1er partie de l'id.
+		} else {
+			document.rubrique = document.page;
+		};
+		
 		mybox.close();
 
 		if(document.rubrique == "references") {
@@ -66,6 +73,7 @@ var app = {
 			document.fichiersAudio[1] = "01";
 		};
 
+		// Joue animeHome si onHome est true.
 		if(document.onHome) {
 			app.animeHome();
 		} else {
