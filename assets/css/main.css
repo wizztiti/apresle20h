@@ -177,7 +177,7 @@ a:hover {
 /************************************************************/
 
 
-.menu .li {
+.menu li {
 	font-family: "Arnopro", Verdana, Geneva, sans-serif;
 	font-size: 0.6rem;
 	text-transform: uppercase;
@@ -193,19 +193,19 @@ a:hover {
 	cursor: pointer;
 }
 
-.menu .li::after {
+.menu li::after {
 	padding-right: 3px;
 	top : -2px;
 	position: absolute;
 	background: white;
 }
 
-.menu .li:hover {
+.menu li:hover {
 	color: #019ad4 !important;
 	background-color: #019ad4 !important;
 }
 
-.blackArea .menu .li::after {
+.blackArea .menu li::after {
 	background-color: black;
 }
 

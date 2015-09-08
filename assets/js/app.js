@@ -19,7 +19,6 @@ var app = {
 		document.BonFichierAudio = true;
 
 		$(".blackArea .content p").delay(1000).animate({"opacity" : 1},1500);
-		//$(".menu .li").on("click", app.clickOnLi);
 		audioPlayer.init();
 		audioPlayer.loadAudio();
 		app.reInitOnClick();
@@ -28,11 +27,11 @@ var app = {
 
 	/*================  REINITIALISATION DES EVENEMENTS ==============*/
 	reInitOnClick : function() {  // Reinitialise les écouteurs d'évenement apres chargement d'une page.
-		$(".menu .li").off();
+		$(".menu li").off();
 		$(".infrarouge_Couverture img").off();
 		$(".pauseAudio").off();
 		$(".startAudio").off();
-		$(".menu .li").on("click", app.clickOnLi);
+		$(".menu li").on("click", app.clickOnLi);
 		$(".infrarouge_Couverture img").on("click", app.clickOnCouvInfrarouge); // clic sur image de couverture	
 		$(".pauseAudio").on("click", function() {
 			app.pauseAudio();
@@ -56,9 +55,9 @@ var app = {
 	/*================  CLIC SUR UN DES MENUS ==============*/
 	clickOnLi : function(e) {
 		e.preventDefault();
-		$("#"+document.rubrique).css({color: "#444444", "background-color": "#444444"}); // les li du menu reprennent leur color initiale.
+		$(".menu li").css({color: "#444444","background-color": "#444444"}); // les li du menu reprennent leur color initiale.
 		document.page = $(this).attr("id");
-		document.rubrique = $(this).attr("class").slice(3);
+		document.rubrique = document.page.substring(0, document.page.search("_") );
 		mybox.close();
 
 		if(document.rubrique == "references") {
@@ -118,7 +117,7 @@ var app = {
 			document.audioOnPlay = true;
 		};
 
-		$("#"+document.rubrique).css({color: "#019ad4", "background-color": "#019ad4"}); // le menu sélectionné garde sa couleur.
+		$("#" + document.rubrique).css({color: "#019ad4","background-color": "#019ad4"}); // le menu sélectionné garde sa couleur.
 	},
 	
 
