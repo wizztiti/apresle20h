@@ -4,30 +4,29 @@
 /*		CONTENT												*/
 /************************************************************/
 
-.whiteArea .article {
+.whiteArea article {
 	font-family: "ArnoPro-Regular", Verdana, Geneva, sans-serif;
-	font-size: 1em;
+	font-size: 1rem;
 	line-height: 1.2;
 	font-weight: 100;
 }
 
-.whiteArea .article::after {  /* Fix pour que la Div aie la taille de son contenu    */
+.whiteArea article::after {  /* Fix pour que la Div aie la taille de son contenu    */
 	content: "";
 	display: table;
 	clear: both;
 }
 
-
-.article li{
-	font-size: 0.7em;
+.whiteArea article li{
+	font-size: 0.7rem;
 	font-weight: 600;
 	height: 0px;
 	margin: 16px 0px 0px;
 }
 
-.whiteArea .article h1 {
+.whiteArea article h1 {
 	font-family: Arial, Verdana, Geneva, sans-serif;
-	font-size: 1.3em;
+	font-size: 1.3rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	color: #019ad4;
@@ -36,19 +35,19 @@
 	margin-bottom: 22px;
 }
 
-.whiteArea .article h2 {
+.whiteArea article h2 {
 	font-family: "ArnoPro-Caption", Verdana, Geneva, sans-serif;
-	font-size: 1.2em;
+	font-size: 1.2rem;
 	margin:  7px 0 0 0;
 }
 
-.whiteArea .article h3 {
+.whiteArea article h3 {
 	font-family: "ArnoPro-SmbdCaption", Verdana, Geneva, sans-serif;
 	margin-top: 13px;
 }
 
 
-.whiteArea .article a {
+.whiteArea article a {
 	font-family: "ArnoPro-Caption", Verdana, Geneva, sans-serif;
 	font-weight: 600;
 }
@@ -57,142 +56,294 @@
 	width: auto !important;
 }
 
+
+.legendeImage {
+	font-size: 0.9rem;
+	text-align: center;
+	color: #777777;
+}
+
+
 /************************************************************/
 /*		SPECIFIQUE AUX PAGES												*/
 /************************************************************/
 
-.consulting_methodologie_texte {
+
+/***  AVANT LE 20H ***/
+#avantle20h img {
+	float: left;
+	margin-right: 20px;
+}
+
+#avantle20h span {
+	font-family: 'ArnoPro-BoldCaption';
+}
+
+
+/*** CONSULTING ***/
+
+#consulting img {
+	float: left; margin-right: 20px;
+}
+
+#consulting_methodologie .texte {
 	float: left;
 	width: 415px;
 	padding-right: 15px;
 }
 
-#consulting_methodologie_images {
+#consulting_methodologie .images {
 	text-align: right;
 }
 
-#consulting_methodologie_images img {
+#consulting_methodologie .images img {
 	padding-bottom: 15px;
+	width: auto;
+	height: 300;
+}
+
+#consulting_nosbonnesadresses img {
+	float: right;
+	margin-left: 20px;
+	width: auto ;
+	height: 300;
+}
+
+#consulting_nosbonnesadresses h2:nth-of-type(2) {
+	margin: 0;
+}
+
+#consulting_nosdomaines img {
+	float: right;
+	margin-left: 20px;
+	width: 250px;
+	height: auto;
+}
+
+#consulting_notreluxeetclients img {
+	float: right;
+	margin-left: 20px;
+}
+
+#consulting_notreRole img {
+	float: right;
+	margin-left: 20px;
+	width: 300px ;
+	height: auto;
 }
 
 
-
-#div_infrarouge_Couverture .infrarouge_Image {
-	position: absolute;
-}
-
-.legendeImage {
-	font-size: 0.9em;
-	text-align: center;
-	color: #777777;
-}
-
-.infrarouge_Couverture img {
-	width: 110px;
-	height: auto ;
-}
-
-.infrarouge_Couverture img:hover {
-	cursor: pointer;
-}
-
-.infrarouge_Video {
-	width: 190px;
-}
-
-#div_infrarouge_Couverture {
+#infrarouge #couvertures {
 	height: 130px;
 	margin-top: 15px;
 }
 
+#infrarouge #couvertures .image {
+	position: absolute;
+}
+
+#infrarouge .couverture img, 
+#welcome_infrarouge .couverture img {
+	width: 110px;
+	height: auto;
+}
+
+#infrarouge .couverture img:hover,
+#welcome_infrarouge .couverture img:hover {
+	cursor: pointer;
+}
+
+#infrarouge .video {
+	width: 190px;
+}
+
+#infrarouge #couvertures #n1 {
+	z-index: 5;
+}
+#infrarouge #couvertures #n1 img {
+	margin-right: 10px;
+}
+#infrarouge #couvertures #n1 a {
+	font-weight: 300;
+	color: #777777;
+	width : 480px;
+	height: 360px;
+}
+
+#infrarouge #couvertures #n2 {
+	left: 120px;
+	z-index: 4;
+}
 
 
+#infrarouge #couvertures #n3 {
+	left: 240px;
+	z-index: 3;
+}
 
-#references_entreamis_texte {
+#infrarouge #couvertures #n4 {
+	left: 360px;
+	z-index: 2;
+}
+
+#infrarouge #couvertures #n5 {
+	left: 480px;
+	z-index: 1;
+	position: relative;
+	top: -14px;
+}
+
+#infrarouge #couvertures #n5 p {
+	position:relative;
+	top: -3px
+}
+
+#presse img {
+	float: left;
+	padding-right: 15px;
+	padding-bottom:30px;
+}
+
+#presse div {
+	line-height: 1.7;
+}
+
+#presse a {
+	font-weight: inherit;
+}
+
+#presse a span {
+	font-weight: 600;
+}
+
+#references_entreamis #texte {
 	width: 283px;
     float: left;
     padding-right: 10px;
 }
 
-#references_entreamis_images {
+#references_entreamis #images {
 	text-align: right;
 }
 
-#references_entreamis_images img {
+#references_entreamis #images div {
+	position: relative;
+	top: -6px;
+	float: right;
+}
+
+#references_entreamis #images p {
+	position: relative;
+	width: 82px;
+	top: -10px;
+	left: 39px;
+	font-size: 0.75rem;
+	line-height: 1;
+}
+
+#references_entreamis #images img {
 	padding-left: 8px;
 	padding-bottom: 7px;
 }
 
+#references_entreamis #panoramique {
+	position: relative;
+	top: -15px;
+}
 
 
 
-
-#references_aperitivo_panoramique {
+#references_aperitivo #panoramique {
 	padding-bottom: 10px;
 }
 
-#references_aperitivo_logo {
+#references_aperitivo #logo {
 	position: relative;
 	left: -7px;
 }
 
-#references_aperitivo_texte {
+#references_aperitivo #texte {
 	width: 400px;
     float: left;
-    padding-right: 10px;
 }
 
-#references_aperitivo_images {
+#references_aperitivo #images {
 	text-align: right;
 }
 
-#references_aperitivo_images img {
+#references_aperitivo #images img {
 	padding-left: 10px;
 	padding-bottom: 10px;
 }
 
-#references_tropezienne_texte {
+#references_autrefois img {
+	float: left;
+	margin-right: 20px;
+}
+
+
+#references_tropezienne #texte {
 	width: 360px;
     float: left;
     padding-right: 10px;
 }
 
-#references_tropezienne_images {
+#references_tropezienne #texte p {
+	margin-bottom: 0px;
+}
+
+#references_tropezienne #vueGlobale {
 	text-align: right;
+	position: relative;
+	top: 23px;
+	right: -4px;
+}
+
+#references_tropezienne #bandeau {
+	position: relative;
+	top: 8px;
+}
+
+#references_tropezienne #deuxPhotos {
+	display: inline-block; 
+	margin-top: 15px;
+}
+
+#references_tropezienne #deuxPhotos #troisHommes {
+	margin-left: 11px;
 }
 
 
-
-#welcome_atmosphere_texte {
+#welcome_atmospheres #texte {
 	width: 422px;
 	float: left;
 	padding-right: 10px;
 }
 
-#welcome_atmosphere_images {
+#welcome_atmospheres #images {
 	float: right;
 	width: 276px;
 }
 
-#welcome_atmospheres_images img {
+#welcome_atmospheress #images img {
 	padding-left: 10px;
 	padding-bottom: 10px;
 }
 
 
 
-#welcome_infrarouge_texte {
+#welcome_infrarouge #texte {
 	width: 332px;
 	float: left;
 	padding-right: 10px;
 }
 
-#welcome_infrarouge_images {
+#welcome_infrarouge #images {
 	float: right;
 	width: 243px;
 }
 
-#welcome_infrarouge_images img {
+#welcome_infrarouge #images img {
 	float: right;
 	margin-left: 11px;
     margin-bottom: 13px;
@@ -200,7 +351,21 @@
 
 
 
-.welcome_consultingfields_image {
+
+#welcome_consultingfields .image {
 	float: left;
     margin-right: 5px;
+}
+
+#welcome_consultingfields .image span {
+	font-weight: 600;
+}
+
+#welcome_consultingfields #texte {
+	width: 650px;
+}
+
+#welcome_consultingfields #bobSinclar {
+	position: relative;
+	top: 14px;
 }

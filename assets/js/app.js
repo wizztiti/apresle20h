@@ -28,11 +28,11 @@ var app = {
 	/*================  REINITIALISATION DES EVENEMENTS ==============*/
 	reInitOnClick : function() {  // Reinitialise les écouteurs d'évenement apres chargement d'une page.
 		$(".menu li").off();
-		$(".infrarouge_Couverture img").off();
+		$(".couverture img").off();
 		$(".pauseAudio").off();
 		$(".startAudio").off();
 		$(".menu li").on("click", app.clickOnLi);
-		$(".infrarouge_Couverture img").on("click", app.clickOnCouvInfrarouge); // clic sur image de couverture	
+		$(".couverture img").on("click", app.clickOnCouvInfrarouge); // clic sur image de couverture	
 		$(".pauseAudio").on("click", function() {
 			app.pauseAudio();
 			app.afficheStartAudio();
@@ -88,7 +88,10 @@ var app = {
 	chargePage : function(page) {
 		app.reInitVariablesPages();
 		$(".btn_sound").css({opacity: 1});
-		$(".whiteArea .content").load("pages/" + page + ".html");
+		$(".whiteArea article").remove();
+		$(".whiteArea .content").append("<article></article>");
+		$(".whiteArea article").attr('id', page);
+		$(".whiteArea article").load("pages/" + page + ".html");
 		//setTimeout(function() {app.reInitOnClick();}, 10); // utilisation de setTimeout résoud bug.
 		app.setAudio(document.fichiersAudio[1]);
 
@@ -172,7 +175,6 @@ var app = {
 					"margin-left": 340
 				});
 
-				$(".whiteArea .content").addClass("article");
 				document.onHome = false;
 				app.chargePage(document.page);
 			}
@@ -181,9 +183,7 @@ var app = {
 	
 	/*================  CLIC SUR COUVERTURE INFRAROUGE  ==============*/
 	clickOnCouvInfrarouge : function() {
-		var idCouv = parseInt($(this).parent().attr("id"));
-		//alert(document.zoomImage);
-
+		var idCouv = parseInt($(this).parent().attr("id").substr(1,1));
 		if(document.page == "infrarouge") { // code pour la page infrarouge
 
 			if(document.zoomImage[idCouv]){
@@ -194,20 +194,21 @@ var app = {
 			document.zoomImage[idCouv] = !document.zoomImage[idCouv];
 
 			if(document.zoomImage[1] || document.zoomImage[2] || document.zoomImage[3] || document.zoomImage[4]) {
-				$("#div_infrarouge_Couverture").css({height: 200});
+				$("#couvertures").css({height: 200});
 			} else {
-				$("#div_infrarouge_Couverture").css({height: 130});
+				$("#couvertures").css({height: 130});
 			};
 			app.verticalAlignCenter();
 
 		} else {							// code pour la page welcome
 
 			if(document.zoomImage[idCouv]){
+
 				$(this).css({width: 110});
-				$(".infrarouge_Couverture").not("#"+idCouv).css({display:"inline"});
+				$(".couverture").not("#n"+idCouv).css({display:"inline"});
 			} else {
 				$(this).css({width: 230});
-				$(".infrarouge_Couverture").not("#"+idCouv).css({display:"none"});
+				$(".couverture").not("#n"+idCouv).css({display:"none"});
 			}
 			document.zoomImage[idCouv] = !document.zoomImage[idCouv];
 		};
